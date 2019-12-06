@@ -1,0 +1,58 @@
+<!-- <button [tranref]="" [currency]="" [description]="" [country]="" [amount]="" [callbackurl]="" [public_key]=""
+  libSeerBitButton (callback)="PaymentDone(a)" (close)="PaymentCancel(b)">Seer Button</button> -->
+<!-- <button seer-bit (callback)="PaymentDone($event)" (close)="PaymentCancel($event)" [options]="options">Seer
+  Button</button>
+<seer-bit (callback)="PaymentDone($event)" (close)="PaymentCancel($event)" [options]="options">Seer Button as component
+</seer-bit>
+
+<button onclick="paywithSeerbit()">Standard JS</button> -->
+
+<div class="container-fluid">
+  <div class="row justify-content-center">
+    <div class="col-12 col-lg-10 col-xl-8">
+
+      <!-- Header -->
+      <div class="header mt-md-5">
+        <div class="header-body">
+
+          <!-- Pretitle -->
+          <h6 class="header-pretitle">
+            Documentation
+          </h6>
+
+          <!-- Title -->
+          <h1 class="header-title">
+            Angular Integration Docs
+          </h1>
+
+        </div>
+      </div>
+
+      <span class="display-4 font-weight-light">As a directive</span>
+      <div class="mb-5">
+        <button class="button mt-4" seer-bit (callback)="PaymentDone($event)" (close)="PaymentCancel($event)"
+          [options]="options">Seer Button as directive</button>
+        <div class="mt-4">
+          <code>
+            <![CDATA[<button seer-bit [options]="options">Seer Button as directive</button>]]>
+          </code>
+        </div>
+      </div>
+
+      <div class="display-4 font-weight-light mb-4">As a component</div>
+      <div class="mb-5">
+        <seer-bit class="button" (callback)="PaymentDone($event)" (close)="PaymentCancel($event)" [options]="options">
+          Seer Button as component
+        </seer-bit>
+        <div class="mt-4">
+          <code>
+            <![CDATA[
+              <seer-bit  [options]="options">
+                Seer Button as component
+              </seer-bit>]]>
+          </code>
+        </div>
+      </div>
+    </div>
+  </div> <!-- / .row -->
+</div>
