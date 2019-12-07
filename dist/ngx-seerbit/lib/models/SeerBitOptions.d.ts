@@ -8,9 +8,6 @@ export interface SeerBitOptions {
      * A flat fee to charge the subaccount for this transaction, in kobo.
      */
     tranref: number;
-    /**
-     * Your pubic Key from Paystack. Use test key for test mode and live key for live mode
-     */
     public_key: string;
     /**
      * The customer's email address

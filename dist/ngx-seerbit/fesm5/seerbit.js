@@ -47,7 +47,8 @@ var SeerbitService = /** @class */ (function () {
             });
             script.addEventListener('load', onLoadFunc);
             //  script.setAttribute('src', 'http://rubic.surge.sh/api/v1/seerbit.js');
-            script.setAttribute('src', '/assets/js/seerbit.js');
+            // script.setAttribute('src', '/assets/js/seerbit.js');
+            script.setAttribute('src', 'https://checkout.seerbitapi.com/api/v1/seerbit.js');
             setTimeout((/**
              * @return {?}
              */

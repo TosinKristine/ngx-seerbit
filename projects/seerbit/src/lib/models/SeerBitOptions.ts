@@ -9,7 +9,7 @@ export interface SeerBitOptions {
    * A flat fee to charge the subaccount for this transaction, in kobo.
    */
   tranref: number;
-  /**
+  
   public_key: string;
   /**
    * The customer's email address
