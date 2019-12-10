@@ -19,6 +19,7 @@
     "@angular/platform-browser": "~8.2.14",
     "@angular/platform-browser-dynamic": "~8.2.14",
     "@angular/router": "~8.2.14",
+    "basic": "^2.0.3",
     "rxjs": "~6.4.0",
     "seerbit": "file:dist/ngx-seerbit/seerbit-0.0.1.tgz",
     "tslib": "^1.10.0",

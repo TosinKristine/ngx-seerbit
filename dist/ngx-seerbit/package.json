@@ -1,19 +1,19 @@
 {
-  "name": "seerbit",
+  "name": "ngx-seerbit",
   "version": "0.0.1",
   "peerDependencies": {
     "@angular/common": "^8.2.14",
     "@angular/core": "^8.2.14"
   },
-  "main": "bundles/seerbit.umd.js",
-  "module": "fesm5/seerbit.js",
-  "es2015": "fesm2015/seerbit.js",
-  "esm5": "esm5/seerbit.js",
-  "esm2015": "esm2015/seerbit.js",
-  "fesm5": "fesm5/seerbit.js",
-  "fesm2015": "fesm2015/seerbit.js",
-  "typings": "seerbit.d.ts",
-  "metadata": "seerbit.metadata.json",
+  "main": "bundles/ngx-seerbit.umd.js",
+  "module": "fesm5/ngx-seerbit.js",
+  "es2015": "fesm2015/ngx-seerbit.js",
+  "esm5": "esm5/ngx-seerbit.js",
+  "esm2015": "esm2015/ngx-seerbit.js",
+  "fesm5": "fesm5/ngx-seerbit.js",
+  "fesm2015": "fesm2015/ngx-seerbit.js",
+  "typings": "ngx-seerbit.d.ts",
+  "metadata": "ngx-seerbit.metadata.json",
   "sideEffects": false,
   "dependencies": {
     "tslib": "^1.9.0"
