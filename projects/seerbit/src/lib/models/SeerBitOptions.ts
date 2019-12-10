@@ -27,6 +27,8 @@ export interface SeerBitOptions {
    * Unique case sensitive transaction reference. Only -,., = and alphanumeric characters allowed.
    */
   description?: string;
+
+  additionals?: any[];
   /**
    * Unique case sensitive transaction reference. Only -,., = and alphanumeric characters allowed.
    */
