@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
-import {NgxSeerbitModule} from 'ngx-seerbit';
+import { NgxSeerbitModule } from 'ngx-seerbit';
 @NgModule({
   declarations: [
     AppComponent

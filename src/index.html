@@ -11,6 +11,28 @@
 </head>
 
 <body>
+  <script src="https://checkout.seerbitapi.com/api/v1/seerbit.js"></script>
+  <script>
+    function paywithSeerbit() {
+      SeerbitPay(
+        {
+          "tranref": new Date().getTime(),
+          "currency": "NGN",
+          "description": "TEST",
+          "country": "NG",
+          "amount": "100.00",
+          "callbackurl": "http://yourdomain.com",
+          "public_key": "SBTESTPUBK_p8GqvFSFNCBahSJinczKd9aIPoRUZfda", //replace this with your own public key 
+        },
+        function callback(response) {
+          console.log(response) /*response of transaction*/
+        },
+        function close(close) {
+          console.log(close) /*transaction close*/
+        }
+      )
+    }
+  </script>
   <app-root></app-root>
 </body>
 

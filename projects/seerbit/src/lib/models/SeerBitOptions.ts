@@ -1,37 +1,23 @@
 import { EventEmitter } from '@angular/core';
 
 export interface SeerBitOptions {
-  /**
-   * Amount to withdraw (in kobo for NGN)
-   */
+ 
   amount: string;
-  /**
-   * A flat fee to charge the subaccount for this transaction, in kobo.
-   */
+
   tranref: number;
   
   public_key: string;
-  /**
-   * The customer's email address
-   */
+ 
   currency: string;
-  /**
-   * Unique case sensitive transaction reference. Only -,., = and alphanumeric characters allowed.
-   */
+ 
   callbackurl?: string;
-  /**
-   * Unique case sensitive transaction reference. Only -,., = and alphanumeric characters allowed.
-   */
+
   country?: string;
-  /**
-   * Unique case sensitive transaction reference. Only -,., = and alphanumeric characters allowed.
-   */
+
   description?: string;
 
   additionals?: any[];
-  /**
-   * Unique case sensitive transaction reference. Only -,., = and alphanumeric characters allowed.
-   */
+ 
 }
 
 export interface PrivateSeerBitOptions extends SeerBitOptions {

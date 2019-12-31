@@ -14,19 +14,11 @@ declare var window: MyWindow;
   selector: '[seer-bit]'
 })
 export class SeerBitButtonDirective {
-
-  // @Input() tranref: string;
-  // @Input() currency: string;
-  // @Input() description: string;
-  // @Input() country: string;
-  // @Input() amount: string;
-  // @Input() callbackurl: string;
-  // @Input() public_key: string;
   @Input() options: any;
   @Output() callback: EventEmitter<any> = new EventEmitter<any>();
   @Output() close: EventEmitter<any> = new EventEmitter<any>();
   private _options: Partial<PrivateSeerBitOptions>;
-  closeFn:any; callbackFn:any;
+  closeFn: any; callbackFn: any;
   constructor(private seerBitService: SeerbitService) {
 
   }
@@ -36,7 +28,6 @@ export class SeerBitButtonDirective {
     this.generateOptions(this.options);
 
     if (errorText) {
-      console.error(errorText);
       return errorText;
     }
     await this.seerBitService.loadScript();
@@ -44,12 +35,12 @@ export class SeerBitButtonDirective {
   }
   generateOptions(obj: any) {
     this._options = this.seerBitService.getSeerBitOptions(obj);
-    this.closeFn = (...response) => {
-      if (!this.close.observers.length) {
+    this.closeFn = (...response:any) => {
+      if (this.close.observers.length) {
         this.close.emit(...response);
       }
     }
-    this.callbackFn = (...response) => {
+    this.callbackFn = (...response:any) => {
       this.callback.emit(...response);
     };
   }

@@ -1,6 +1,7 @@
 import { Component, OnInit, Output, Input, EventEmitter, HostListener } from '@angular/core';
 import { PrivateSeerBitOptions, SeerBitOptions } from './models/SeerBitOptions';
 import { SeerbitService } from './seerbit-service';
+declare var SeerbitPay
 interface MyWindow extends Window {
   SeerbitPay:
   {
@@ -19,18 +20,18 @@ export class SeerBitComponent {
   @Output() callback: EventEmitter<any> = new EventEmitter<any>();
   @Output() close: EventEmitter<any> = new EventEmitter<any>();
   private _options: Partial<PrivateSeerBitOptions>;
-  closeFn: any; callbackFn: any;
+  closeFn: any; callbackFn: any
   constructor(private seerBitService: SeerbitService) {
 
   }
   generateOptions(obj: any) {
     this._options = this.seerBitService.getSeerBitOptions(obj);
-    this.closeFn = (...response) => {
-      if (!this.close.observers.length) {
+    this.closeFn = (...response:any) => {
+      if (this.close.observers.length) {
         this.close.emit(...response);
       }
     }
-    this.callbackFn = (...response) => {
+    this.callbackFn = (...response:any) => {
       this.callback.emit(...response);
     };
   }
@@ -44,14 +45,14 @@ export class SeerBitComponent {
   async buttonClick() {
     this.pay();
   }
-    async pay() {
+  async pay() {
     let errorText = this.validateInput(this.options);
     this.generateOptions(this.options);
     if (errorText) {
-      console.error(errorText);
       return errorText;
     }
-    await this.seerBitService.loadScript();
-    window.SeerbitPay(this._options, this.closeFn, this.callbackFn)
+    await this.seerBitService.loadScript().then(()=>{
+      window.SeerbitPay(this._options,this.callbackFn,this.closeFn)
+    });
   }
 }
